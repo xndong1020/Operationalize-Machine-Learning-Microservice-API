@@ -1,0 +1,10 @@
+# any shell scripts
+*.sh
+
+# makedown files
+*.makedown
+
+# output_txt_files
+output_txt_files
+
+

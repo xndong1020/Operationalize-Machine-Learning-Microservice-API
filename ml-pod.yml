@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ml-pod
+  labels:
+    component: ml-pod
+spec:
+  containers:
+    - name: ml-api
+      image: isdance/ml-api:latest
+      ports:
+        - containerPort: 80

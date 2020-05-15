@@ -1,5 +1,36 @@
 [![<isdance>](https://circleci.com/gh/isdance/Operationalize-Machine-Learning-Microservice-API.svg?style=svg)](https://github.com/isdance/Operationalize-Machine-Learning-Microservice-API)
 
+
+### Project Summary
+
+In this project, a Machine Learning Microservice API will be containerized, and tested continously through CircleCI CI/CD pipeline. 
+
+After tests are passed, the dockerized Machine Learning Microservice API will be deployed to local Kubectl + minikube environment.
+
+
+## Setup the Environment
+* Run `make setup` to create a virtualenv and activate it
+* Run `make install` to install the necessary dependencies
+
+### Running `app.py`
+
+1. Standalone:  `python app.py`
+2. Run in Docker:  `./run_docker.sh`. The docker container will be running in detached mode.
+3. Run in Kubernetes:  `./run_kubernetes.sh`. Make a prediction using a separate terminal tab, and a call to `./make_prediction.sh`
+
+
+### Files in the repository
+1. `.circleci` folder is for `CircleCI` CI/CD pipeline
+2. `output_txt_files` are logs/outputs from docker/kubectl
+3. `app.py` is the Machine Learning Microservice API application entry file.
+4. `Dockerfile` is for dockerize the Machine Learning Microservice API application.
+5. `Makefile` is mainly for automation.
+6. `ml-pod.yml` is for kubectl to create a pod to host the dockerized the Machine Learning Microservice API
+7. `run_docker.sh` is to run dockerized application in detached mode. 
+   `run_kubernetes.sh` is to run dockerized application in local kubectl environment. 
+   `upload_docker.sh` is to upload file to Docker Hub.
+   `make_prediction.sh` is for sending some input data to the containerized application via the appropriate port 
+
 ### Project Tasks
 
 Tasks are listed as following:
@@ -49,26 +80,6 @@ Tasks are listed as following:
 * Deploy a container using Kubernetes and make a prediction
 * Upload a complete Github repo with CircleCI to indicate that your code has been tested
 
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
-
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
-
 ---
 
-## Setup the Environment
 
-* Create a virtualenv and activate it
-* Run `make install` to install the necessary dependencies
-
-### Running `app.py`
-
-1. Standalone:  `python app.py`
-2. Run in Docker:  `./run_docker.sh`
-3. Run in Kubernetes:  `./run_kubernetes.sh`
-
-### Kubernetes Steps
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl

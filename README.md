@@ -28,8 +28,23 @@ Tasks are listed as following:
     ```
 
 * Complete a Dockerfile to containerize this application
+
+    - Under root directory of the project, run `docker build -t isdance/ml-api .`
+
 * Deploy your containerized application using Docker and make a prediction
+
+    - To run this image locally `docker run -p 8000:80 --name ml-api b85489e51cb3`. 
+    - Create a `run_docker.sh` to start your docker image
+    - Go to `http://localhost:8000`. You should be able to see `Sklearn Prediction Home`
+    
+
 * Improve the log statements in the source code for this application
+
+  ```py
+  # TO DO:  Log the output prediction value
+  LOG.info(f"Output prediction: {prediction}")
+  ``` 
+
 * Configure Kubernetes and create a Kubernetes cluster
 * Deploy a container using Kubernetes and make a prediction
 * Upload a complete Github repo with CircleCI to indicate that your code has been tested

@@ -1,4 +1,4 @@
-#### To add a CircleCI badge here
+[![<isdance>](https://circleci.com/gh/isdance/Operationalize-Machine-Learning-Microservice-API.svg?style=svg)](https://github.com/isdance/Operationalize-Machine-Learning-Microservice-API)
 
 ### Project Tasks
 

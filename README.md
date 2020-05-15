@@ -22,13 +22,13 @@ After tests are passed, the dockerized Machine Learning Microservice API will be
 ### Files in the repository
 1. `.circleci` folder is for `CircleCI` CI/CD pipeline
 2. `output_txt_files` are logs/outputs from docker/kubectl
-3. `app.py` is the Machine Learning Microservice API application entry file.
-4. `Dockerfile` is for dockerize the Machine Learning Microservice API application.
+3. `app.py` is the Machine Learning Microservice API application file, which contains AI logics.
+4. `Dockerfile` is for dockerizing the Machine Learning Microservice API application.
 5. `Makefile` is mainly for automation.
-6. `ml-pod.yml` is for kubectl to create a pod to host the dockerized the Machine Learning Microservice API
-7. `run_docker.sh` is to run dockerized application in detached mode. 
-   `run_kubernetes.sh` is to run dockerized application in local kubectl environment. 
-   `upload_docker.sh` is to upload file to Docker Hub.
+6. `ml-pod.yml` is for kubectl to create a pod to host the dockerized Machine Learning Microservice API
+7. `run_docker.sh` is to run the dockerized application in detached mode. 
+   `run_kubernetes.sh` is to run the dockerized application in local kubectl environment. 
+   `upload_docker.sh` is to upload application docker image to Docker Hub.
    `make_prediction.sh` is for sending some input data to the containerized application via the appropriate port 
 
 ### Project Tasks
